@@ -48,7 +48,7 @@ const BackgroundMusic = ({ isOpen }) => {
     setIsPlaying(!isPlaying);
   };
 
-  if (!isOpen) return null;
+  // if (!isOpen) return null; // Removed to allow music on splash screen
 
   return (
     <div className="music-controls">

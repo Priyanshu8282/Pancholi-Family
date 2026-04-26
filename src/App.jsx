@@ -84,25 +84,27 @@ function App() {
   );
 
   return (
-    <AnimatePresence mode="wait">
-      {!isOpen ? (
-        <SplashScreen key="splash" onOpen={() => setIsOpen(true)} />
-      ) : (
-        <motion.div
-          key="content"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <BackgroundMusic isOpen={isOpen} />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/event/:eventId" element={<EventDetails />} />
-          </Routes>
-          <Footer />
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <>
+      <BackgroundMusic isOpen={isOpen} />
+      <AnimatePresence mode="wait">
+        {!isOpen ? (
+          <SplashScreen key="splash" onOpen={() => setIsOpen(true)} />
+        ) : (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/event/:eventId" element={<EventDetails />} />
+            </Routes>
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 
