@@ -19,7 +19,7 @@ const events = [
     date: 'MAY 03',
     fullDate: 'Sunday, 03 May 2026',
     time: '08:00 PM Onwards',
-    location: 'Farara',
+    location: 'Farara Mahadev',
     image: '/event-bhajan.png'
   },
   {
@@ -28,7 +28,7 @@ const events = [
     date: 'MAY 04',
     fullDate: 'Monday, 04 May 2026',
     time: '06:15 AM',
-    location: 'Farara',
+    location: 'Farara Mahadev',
     image: '/event-mundan.png'
   },
   {
@@ -37,7 +37,7 @@ const events = [
     date: 'MAY 04',
     fullDate: 'Monday, 04 May 2026',
     time: '09:00 AM Onwards',
-    location: 'Farara',
+    location: 'Farara Mahadev',
     image: '/event-bhoj.png'
   }
 ];

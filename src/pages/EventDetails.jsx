@@ -20,7 +20,7 @@ const eventData = {
     date: '2026-05-03T20:00:00',
     dateText: 'Sunday, 03 May 2026',
     time: '08:00 PM Onwards',
-    location: 'Shri Kuneshwar Mahadev, Farara',
+    location: 'Shri Kuneshwar Mahadev, Farara Mahadev',
     description: 'A spiritual evening filled with devotional melodies and bhajans (Ratri Jagaran) to celebrate the divine presence and family togetherness.',
     image: '/event-bhajan.png'
   },
@@ -29,7 +29,7 @@ const eventData = {
     date: '2026-05-04T06:15:00',
     dateText: 'Monday, 04 May 2026',
     time: '06:15 AM',
-    location: 'Shri Kuneshwar Mahadev, Farara',
+    location: 'Shri Kuneshwar Mahadev, Farara Mahadev',
     description: 'The main ceremony of Praneet (Laddu) - a sacred ritual marking his first haircut and symbolizing purity and a fresh start.',
     image: '/event-mundan.png'
   },
@@ -38,7 +38,7 @@ const eventData = {
     date: '2026-05-04T09:00:00',
     dateText: 'Monday, 04 May 2026',
     time: '09:00 AM Onwards',
-    location: 'Shri Kuneshwar Mahadev, Farara',
+    location: 'Shri Kuneshwar Mahadev, Farara Mahadev',
     description: 'A celebratory community feast to share joy and seek blessings from all our loved ones after the main ceremony.',
     image: '/event-bhoj.png'
   }
