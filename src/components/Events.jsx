@@ -50,12 +50,12 @@ const Events = () => {
         <h2 className="serif-font" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', color: 'var(--primary)', marginTop: '10px' }}>✨ Auspicious Events ✨</h2>
       </div>
 
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-        gap: '20px', 
-        maxWidth: '1400px', 
-        margin: '0 auto' 
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+        gap: '20px',
+        maxWidth: '1400px',
+        margin: '0 auto'
       }}>
         {events.map((event, index) => (
           <motion.div
@@ -78,9 +78,9 @@ const Events = () => {
           >
             {/* Image Container */}
             <div style={{ position: 'relative', height: '280px', overflow: 'hidden' }}>
-              <img 
-                src={event.image} 
-                alt={event.title} 
+              <img
+                src={event.image}
+                alt={event.title}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
               <div style={{
@@ -91,7 +91,7 @@ const Events = () => {
                 height: '100%',
                 background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent 40%)'
               }}></div>
-              
+
               {/* Floating Date Badge */}
               <div style={{
                 position: 'absolute',
@@ -113,7 +113,7 @@ const Events = () => {
             {/* Content Container */}
             <div style={{ padding: '25px', flex: 1, display: 'flex', flexDirection: 'column' }}>
               <h3 className="serif-font" style={{ fontSize: '1.6rem', color: 'var(--primary)', marginBottom: '15px' }}>{event.title}</h3>
-              
+
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-light)', fontSize: '0.9rem' }}>
                   <Calendar size={16} color="var(--secondary)" />
@@ -129,15 +129,15 @@ const Events = () => {
                 </div>
               </div>
 
-              <Link 
-                to={`/event/${event.id}`} 
-                style={{ 
+              <Link
+                to={`/event/${event.id}`}
+                style={{
                   marginTop: 'auto',
-                  textDecoration: 'none', 
-                  color: 'var(--primary)', 
-                  fontWeight: 700, 
-                  display: 'flex', 
-                  alignItems: 'center', 
+                  textDecoration: 'none',
+                  color: 'var(--primary)',
+                  fontWeight: 700,
+                  display: 'flex',
+                  alignItems: 'center',
                   gap: '5px',
                   fontSize: '0.8rem',
                   textTransform: 'uppercase',

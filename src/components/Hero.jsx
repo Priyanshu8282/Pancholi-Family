@@ -7,9 +7,9 @@ const Hero = () => {
   const petals = Array.from({ length: 20 });
 
   return (
-    <section className="hero" style={{ 
+    <section className="hero" style={{
       position: 'relative',
-      height: 'calc(100vh - 80px)', 
+      height: 'calc(100vh - 80px)',
       minHeight: '700px',
       width: '100vw',
       maxWidth: '100%',
@@ -17,7 +17,7 @@ const Hero = () => {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      padding: '60px 20px', 
+      padding: '60px 20px',
       overflow: 'hidden',
       background: '#000',
       margin: 0
@@ -31,9 +31,9 @@ const Hero = () => {
         height: '100%',
         zIndex: 0
       }}>
-        <img 
-          src="/hero-bg.png" 
-          alt="Mundan Ceremony Background" 
+        <img
+          src="/hero-bg.png"
+          alt="Mundan Ceremony Background"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{
@@ -52,19 +52,19 @@ const Hero = () => {
           <motion.div
             key={i}
             className="petal"
-            initial={{ 
-              top: '-10%', 
+            initial={{
+              top: '-10%',
               left: `${Math.random() * 100}%`,
               opacity: 0,
               rotate: 0
             }}
-            animate={{ 
+            animate={{
               top: '110%',
               left: `${(Math.random() * 100) + (Math.random() * 20 - 10)}%`,
               opacity: [0, 0.8, 0.8, 0],
               rotate: 360
             }}
-            transition={{ 
+            transition={{
               duration: 6 + Math.random() * 6,
               repeat: Infinity,
               delay: Math.random() * 12,
@@ -77,15 +77,15 @@ const Hero = () => {
         ))}
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="hero-content"
-        style={{ 
-          textAlign: 'center', 
-          zIndex: 10, 
-          maxWidth: '1200px', 
+        style={{
+          textAlign: 'center',
+          zIndex: 10,
+          maxWidth: '1200px',
           width: '100%',
           padding: '20px',
           color: 'white',
@@ -96,9 +96,9 @@ const Hero = () => {
         <div className="hero-ornament" style={{ marginBottom: '1.5rem' }}>
           <hr style={{ borderColor: 'var(--secondary)', opacity: 0.8 }} />
           <motion.span animate={{ opacity: [0.4, 1, 0.4] }} transition={{ duration: 2, repeat: Infinity }}>✨</motion.span>
-          <span style={{ 
-            fontFamily: 'Cormorant Garamond, serif', 
-            letterSpacing: '5px', 
+          <span style={{
+            fontFamily: 'Cormorant Garamond, serif',
+            letterSpacing: '5px',
             fontWeight: 700,
             textTransform: 'uppercase',
             fontSize: 'clamp(0.9rem, 2.5vw, 1.2rem)',
@@ -111,8 +111,8 @@ const Hero = () => {
           <hr style={{ borderColor: 'var(--secondary)', opacity: 0.8 }} />
         </div>
 
-        <h4 className="serif-font" style={{ 
-          fontSize: 'clamp(1.4rem, 4vw, 2.2rem)', 
+        <h4 className="serif-font" style={{
+          fontSize: 'clamp(1.4rem, 4vw, 2.2rem)',
           marginBottom: '0.5rem',
           color: '#fff',
           fontWeight: 400,
@@ -122,13 +122,13 @@ const Hero = () => {
           Mundan Ceremony of
         </h4>
 
-        <motion.h1 
+        <motion.h1
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
-          style={{ 
-            fontSize: 'clamp(4rem, 18vw, 9rem)', 
-            color: 'var(--secondary)', 
+          style={{
+            fontSize: 'clamp(4rem, 18vw, 9rem)',
+            color: 'var(--secondary)',
             marginBottom: '0',
             lineHeight: 0.85,
             fontFamily: 'Cormorant Garamond, serif',
@@ -138,10 +138,10 @@ const Hero = () => {
         >
           Praneet
         </motion.h1>
-        
-        <p className="script-font" style={{ 
-          fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', 
-          color: '#fff', 
+
+        <p className="script-font" style={{
+          fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
+          color: '#fff',
           marginTop: '-5px',
           marginBottom: '2rem',
           textShadow: '2px 2px 10px rgba(0,0,0,0.8)',
@@ -152,9 +152,9 @@ const Hero = () => {
 
         {/* Info Grid */}
         <div style={{ marginBottom: '2rem' }}>
-          <div className="hero-info-grid" style={{ 
-            background: 'rgba(0,0,0,0.4)', 
-            backdropFilter: 'blur(10px)', 
+          <div className="hero-info-grid" style={{
+            background: 'rgba(0,0,0,0.4)',
+            backdropFilter: 'blur(10px)',
             borderRadius: '50px',
             padding: '12px 35px',
             display: 'inline-flex',
@@ -176,9 +176,9 @@ const Hero = () => {
           </div>
         </div>
 
-        <p className="serif-font" style={{ 
-          fontSize: 'clamp(1.2rem, 3.5vw, 1.8rem)', 
-          color: '#fff', 
+        <p className="serif-font" style={{
+          fontSize: 'clamp(1.2rem, 3.5vw, 1.8rem)',
+          color: '#fff',
           letterSpacing: '3px',
           fontWeight: 500,
           textShadow: '0 2px 10px rgba(0,0,0,0.8)',

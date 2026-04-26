@@ -12,6 +12,7 @@ import DevotionalSection from './components/DevotionalSection';
 import AboutCeremony from './components/AboutCeremony';
 import EventDetails from './pages/EventDetails';
 import ComplimentsSection from './components/ComplimentsSection';
+import Gallery from './components/Gallery';
 import BackgroundMusic from './components/BackgroundMusic';
 import './App.css';
 
@@ -78,6 +79,7 @@ function App() {
       <DevotionalSection />
       <AboutCeremony />
       <Events />
+      <Gallery />
       <ComplimentsSection />
       <ContactRSVP />
     </div>
