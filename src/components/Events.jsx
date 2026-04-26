@@ -11,7 +11,7 @@ const events = [
     fullDate: 'Thursday, 30 April 2026',
     time: '02:00 PM Onwards',
     location: 'Fatehnagar',
-    image: '/event-vinayak.png'
+    image: '/image-2.png'
   },
   {
     id: 'bhajan-sandhya',
@@ -19,8 +19,8 @@ const events = [
     date: 'MAY 03',
     fullDate: 'Sunday, 03 May 2026',
     time: '08:00 PM Onwards',
-    location: 'Farara',
-    image: '/event-bhajan.png'
+    location: 'Farara Mahadev',
+    image: '/image-3.png'
   },
   {
     id: 'mundan-sanskar',
@@ -28,8 +28,8 @@ const events = [
     date: 'MAY 04',
     fullDate: 'Monday, 04 May 2026',
     time: '06:15 AM',
-    location: 'Farara',
-    image: '/event-mundan.png'
+    location: 'Farara Mahadev',
+    image: '/image-4.png'
   },
   {
     id: 'sneh-bhoj',
@@ -37,8 +37,8 @@ const events = [
     date: 'MAY 04',
     fullDate: 'Monday, 04 May 2026',
     time: '09:00 AM Onwards',
-    location: 'Farara',
-    image: '/event-bhoj.png'
+    location: 'Farara Mahadev',
+    image: '/image-5.png'
   }
 ];
 
