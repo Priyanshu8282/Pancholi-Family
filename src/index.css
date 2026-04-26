@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary: #800000; /* Deep Maroon */
+  --secondary: #D4AF37; /* Gold */
+  --accent: #B4945C; /* Muted Gold */
+  --bg-cream: #FFFBF2;
+  --text-dark: #2D241E;
+  --text-light: #6B5E55;
+  --glass: rgba(255, 251, 242, 0.85);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.1);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+}
+
+.script-font {
+  font-family: 'Great Vibes', cursive;
+}
+
+.serif-font {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+section:not(.hero):not(.event-hero) {
+  max-width: 1200px;
+  padding: 80px 20px;
+}
+
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Splash Screen */
+.splash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                    url('/mundan-bg.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.splash-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+}
+
+.splash-card {
+  text-align: center;
+  padding: 40px 30px;
+  max-width: 450px;
+  width: 92%;
+  position: relative;
+  background: #f4f1ea; /* Sophisticated cream */
+  border-radius: 30px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3), 
+              inset 0 0 0 1px rgba(255,255,255,0.5);
+  z-index: 1;
+  animation: cardFadeIn 1s ease-out;
+}
+
+.event-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #a67c00;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+/* Sparkle Particles */
+.splash-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle, #fff 1px, transparent 1px),
+    radial-gradient(circle, #fff 1px, transparent 1px);
+  background-size: 50px 50px, 100px 100px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.2;
+  animation: sparkle 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100px); }
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.gold-star {
+  font-size: 4rem;
+  color: #d4af37;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.splash-card h1 {
+  font-size: clamp(2rem, 8vw, 3rem);
+  color: #800000;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.splash-card .invitation-subtitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #6b5e55;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.btn-open-invitation {
+  background: linear-gradient(to right, #d4af37, #a67c00, #800000);
+  background-size: 200% auto;
+  color: white;
+  padding: 20px 50px;
+  border-radius: 60px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 15px 35px rgba(128, 0, 0, 0.3);
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.btn-open-invitation:hover {
+  background-position: right center;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(128, 0, 0, 0.4);
+}
+
+.traditional-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.dhol-icon {
+  width: 60px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+  animation: dholBeat 1.5s infinite ease-in-out;
+}
+
+.dhol-icon:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dhol-icon:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dholBeat {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-3deg); }
+  50% { transform: scale(1.05) rotate(3deg); }
+  75% { transform: scale(1.1) rotate(-2deg); }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+}
+
+/* Animations */
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Falling Flower Petals Animation */
+.petals-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.petal {
+  position: absolute;
+  top: -10%;
+  color: #ffb7c5; /* Sakura pink */
+  font-size: 1.5rem;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.hero-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.hero-ornament span {
+  font-size: 1.5rem;
+}
+
+.hero-ornament hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid var(--secondary);
+  max-width: 50px;
+}
+
+.hero-info-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 2rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 15px 0;
+}
+
+.hero-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.hero-info-item i {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.mandala-bg {
+  background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+}
+
+/* Toran (Hanging Flowers) */
+.toran-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.toran-flower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flower-string {
+  width: 1px;
+  height: 60px;
+  background: rgba(212, 175, 55, 0.4);
+}
+
+.flower-head {
+  font-size: 1.5rem;
+  margin-top: -5px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.card-inner-border {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 30px 20px;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.card-inner-border::before,
+.card-inner-border::after {
+  content: '✨';
+  position: absolute;
+  font-size: 1rem;
+  color: #d4af37;
+}
+
+.card-inner-border::before { top: 10px; left: 10px; }
+.card-inner-border::after { bottom: 10px; right: 10px; }
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+  .splash-card {
+    padding: 40px 20px;
+  }
+}
+
+/* Music Controls */
+.music-controls {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.music-btn {
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.music-btn-play {
+  width: 55px;
+  height: 55px;
+  background: var(--secondary);
+  color: white;
+  position: relative;
+}
+
+.music-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.music-btn:active {
+  transform: scale(0.95);
+}
+
+.music-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--secondary);
+  z-index: -1;
+  opacity: 0.3;
+}
